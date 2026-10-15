@@ -1,0 +1,860 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1eee6">
+  <meta name="description" content="Phumelela Child and Youth Care Centre — uplifting children, empowering lives.">
+
+  <title>Phumelela Child &amp; YouthCare Centre</title>
+
+  <style>
+    :root {
+      --purple: #363382;
+      --purple-dark: #292765;
+      --orange: #f5821f;
+      --cream: #f1eee6;
+      --background: #f8f7f4;
+      --white: #ffffff;
+      --text: #333333;
+      --muted: #666666;
+      --border: #dddddd;
+
+      --font-main: "TBJ Neuetra", "Neuetra", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      font-family: var(--font-main);
+      color: var(--text);
+      background: var(--background);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* TOP CONTACT BAR */
+    .topbar {
+      background: var(--purple-dark);
+      color: var(--white);
+      padding: 12px 0;
+      font-size: 13px;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .topbar-inner span {
+      white-space: nowrap;
+    }
+
+    .topbar-inner .topbar-brand {
+      margin-right: auto;
+    }
+
+    .topbar-brand {
+      color: var(--orange);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .topbar a:hover {
+      color: var(--orange);
+    }
+
+    /* TOP ORGANISATION BRAND */
+    .brand-section {
+      background: var(--cream);
+      padding: 32px 20px;
+      text-align: center;
+    }
+
+    .brand-content {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    /* LARGE LOGO AT THE TOP */
+    .brand-logo {
+      display: block;
+      width: 190px;
+      height: 190px;
+      object-fit: contain;
+      margin: 0 auto 18px;
+    }
+
+    .brand-name {
+      color: var(--purple);
+      font-size: clamp(29px, 4.5vw, 44px);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0.1px;
+    }
+
+    .brand-highlight {
+      color: var(--orange);
+    }
+
+    .brand-second-line {
+      display: block;
+      margin-top: 4px;
+      color: var(--purple);
+    }
+
+    .brand-slogan {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .brand-slogan strong {
+      color: var(--purple);
+      font-weight: 700;
+    }
+
+    /* NAVIGATION */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px 25px;
+      padding: 15px 0;
+    }
+
+    .nav-links a {
+      color: var(--purple-dark);
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--orange);
+    }
+
+    /* WELCOME SECTION */
+    .hero {
+      background: var(--purple);
+      color: var(--white);
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      margin-bottom: 18px;
+      font-size: clamp(32px, 5vw, 50px);
+      line-height: 1.2;
+    }
+
+    .hero h1 span {
+      color: var(--orange);
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: 0 auto 25px;
+      color: #f2f2f2;
+      font-size: 16px;
+    }
+
+    .hero-button {
+      display: inline-block;
+      padding: 12px 25px;
+      background: var(--orange);
+      color: var(--white);
+      border: 1px solid var(--orange);
+      border-radius: 0;
+      font-weight: 700;
+      transition: background 0.2s ease;
+    }
+
+    .hero-button:hover {
+      background: #df6e10;
+      border-color: #df6e10;
+    }
+
+    /* GENERAL SECTIONS */
+    .content-section {
+      padding: 60px 0;
+      scroll-margin-top: 85px;
+    }
+
+    .section-heading {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2,
+    .registration-content h2 {
+      color: var(--purple-dark);
+      font-size: clamp(26px, 4vw, 35px);
+      line-height: 1.3;
+    }
+
+    .section-heading p {
+      max-width: 700px;
+      margin: 12px auto 0;
+      color: var(--muted);
+    }
+
+    /* ABOUT US */
+    .about-section {
+      background: var(--white);
+    }
+
+    .about-text {
+      max-width: 850px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .about-text p + p {
+      margin-top: 18px;
+    }
+
+    /* VISION AND MISSION */
+    .purpose-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .purpose-card {
+      padding: 28px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--orange);
+      border-radius: 0;
+      box-shadow: none;
+      scroll-margin-top: 90px;
+    }
+
+    .purpose-card h3 {
+      margin-bottom: 12px;
+      color: var(--purple);
+      font-size: 23px;
+    }
+
+    .purpose-card p {
+      color: var(--muted);
+    }
+
+    /* OUR SERVICES */
+    .services-section {
+      background: var(--cream);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      padding: 24px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--orange);
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .service-card h3 {
+      margin-bottom: 8px;
+      color: var(--purple);
+      font-size: 19px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+    }
+
+    /* REGISTRATION SECTION */
+    .registration-section {
+      background: var(--white);
+      text-align: center;
+    }
+
+    .registration-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .registration-content h2 {
+      margin-bottom: 16px;
+    }
+
+    .registration-content p {
+      color: var(--muted);
+    }
+
+    /* CONTACT SECTION */
+    .contact-section {
+      background: var(--background);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .contact-card {
+      padding: 28px 22px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 0;
+      box-shadow: none;
+      text-align: center;
+    }
+
+    .contact-card h3 {
+      margin-bottom: 8px;
+      color: var(--purple-dark);
+      font-size: 20px;
+    }
+
+    .contact-card p {
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact-card a {
+      color: var(--purple);
+      font-weight: 700;
+    }
+
+    .contact-card a:hover {
+      color: var(--orange);
+      text-decoration: underline;
+    }
+
+    /* CENTRE THE THIRD CONTACT CARD */
+    .contact-card:last-child:nth-child(3) {
+      grid-column: 1 / -1;
+      width: calc(50% - 11px);
+      justify-self: center;
+    }
+
+    /* SMALLER LOGO AT THE BOTTOM */
+    .bottom-brand {
+      padding: 35px 20px;
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .bottom-brand-logo {
+      display: block;
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      margin: 0 auto 12px;
+    }
+
+    .bottom-brand h2 {
+      color: var(--purple);
+      font-size: 21px;
+      line-height: 1.4;
+      margin-bottom: 4px;
+    }
+
+    .bottom-brand p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* FOOTER */
+    .footer {
+      padding: 24px 20px;
+      background: var(--purple-dark);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .footer p {
+      color: #eeeeee;
+      font-size: 13px;
+    }
+
+    .footer strong {
+      color: var(--orange);
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 700px) {
+      .topbar-inner {
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 6px 15px;
+      }
+
+      .topbar-inner .topbar-brand {
+        width: 100%;
+        margin-right: 0;
+      }
+
+      .nav-links {
+        gap: 10px 16px;
+        padding: 12px 8px;
+      }
+
+      .nav-links a {
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 50px 20px;
+      }
+
+      .content-section {
+        padding: 45px 0;
+      }
+
+      .purpose-grid,
+      .services-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card:last-child:nth-child(3) {
+        grid-column: auto;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .topbar {
+        font-size: 12px;
+      }
+
+      .topbar-brand {
+        font-size: 13px;
+      }
+
+      .brand-logo {
+        width: 150px;
+        height: 150px;
+      }
+
+      .brand-name {
+        font-size: 25px;
+      }
+
+      .brand-slogan {
+        font-size: 13px;
+      }
+
+      .nav-links {
+        gap: 8px 12px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .purpose-card,
+      .service-card {
+        padding: 22px;
+      }
+
+      .bottom-brand-logo {
+        width: 100px;
+        height: 100px;
+      }
+
+      .bottom-brand h2 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP CONTACT BAR -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+
+      <span class="topbar-brand">
+        Phumelela CYCC
+      </span>
+
+      <span>
+        Emmanuel:
+        <a href="tel:+27606887845">+27 60 688 7845</a>
+      </span>
+
+      <span>
+        Mlungisi:
+        <a href="tel:+27765836672">+27 76 583 6672</a>
+      </span>
+
+    </div>
+  </div>
+
+  <!-- TOP BRAND: LARGE LOGO, NAME AND SLOGAN -->
+  <header class="brand-section" id="home">
+    <div class="brand-content">
+
+      <img
+        class="brand-logo"
+        src="/Phumelela%20Logo%20CYCC.png"
+        alt="Phumelela Child and Youth Care Centre logo"
+      >
+
+      <div class="brand-name">
+        Phumelela
+        <span class="brand-highlight">Child &amp; Youth</span>
+        <span class="brand-second-line">Care Centre</span>
+      </div>
+
+      <p class="brand-slogan">
+        Uplifting children, <strong>empowering lives.</strong>
+      </p>
+
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="container nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#vision">Our Vision</a>
+      <a href="#mission">Our Mission</a>
+      <a href="#services">Our Services</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- WELCOME -->
+    <section class="hero">
+      <div class="hero-content">
+
+        <h1>
+          Welcome to <span>Phumelela CYCC</span>
+        </h1>
+
+        <p>
+          Uplifting children and youth through care, guidance, faith,
+          education, and opportunities for a brighter future.
+        </p>
+
+        <a class="hero-button" href="#about">
+          Discover Our Purpose
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ABOUT US -->
+    <section class="content-section about-section" id="about">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Who We Are</span>
+          <h2>About Phumelela</h2>
+        </div>
+
+        <div class="about-text">
+
+          <p>
+            Phumelela Child and Youth Care Centre (Phumelela CYCC)
+            intends to operate as a Non-Profit Organisation (NPO)
+            and obtain Public Benefit Organisation (PBO) status.
+          </p>
+
+          <p>
+            Phumelela aims to establish a safe and nurturing environment
+            that supports the growth and well-being of children and youth
+            in every aspect of their lives.
+          </p>
+
+          <p>
+            The organisation intends to uplift children and youth by
+            helping them discover themselves in Jesus Christ, addressing
+            social challenges that limit their growth and opportunities,
+            and providing resources and mentorship to build their
+            confidence and self-esteem. Through transforming mindsets
+            and creating pathways to new opportunities, Phumelela aims
+            to support a brighter and more hopeful future.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- VISION AND MISSION -->
+    <section class="content-section" id="vision">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Our Purpose</span>
+          <h2>Our Vision &amp; Mission</h2>
+        </div>
+
+        <div class="purpose-grid">
+
+          <article class="purpose-card">
+            <h3>Our Vision</h3>
+            <p>
+              To establish a safe and nurturing environment that is
+              sustainable for the growth and well-being of children
+              and youth in every aspect of their lives.
+            </p>
+          </article>
+
+          <article class="purpose-card" id="mission">
+            <h3>Our Mission</h3>
+            <p>
+              The organisation intends to uplift children and youth by
+              first and foremost helping them discover themselves in
+              Jesus Christ, addressing social challenges that limit
+              their growth and opportunities, providing resources and
+              mentorship to build their confidence and self-esteem,
+              transforming mindsets, and creating pathways toward a
+              brighter and more hopeful future.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR SERVICES -->
+    <section class="content-section services-section" id="services">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">How We Make a Difference</span>
+          <h2>Our Services</h2>
+          <p>
+            Phumelela aims to support the overall development, safety,
+            and well-being of children and youth through the following
+            services.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service-card">
+            <h3>Safe Residential Care</h3>
+            <p>
+              Providing a safe, caring, and supportive living environment
+              for children and youth.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <h3>Education</h3>
+            <p>
+              Promoting education, encouraging learning, and supporting
+              educational development.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <h3>Health and Well-being</h3>
+            <p>
+              Improving health and promoting the physical and overall
+              well-being of children and youth.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <h3>Emotional and Spiritual Support</h3>
+            <p>
+              Supporting emotional growth, spiritual development,
+              and personal well-being.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <h3>Life Skills</h3>
+            <p>
+              Helping children and youth develop essential life skills
+              for greater independence and confidence.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <h3>Family and Community</h3>
+            <p>
+              Strengthening family relationships and building positive
+              connections within the community.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <h3>Children's Rights</h3>
+            <p>
+              Promoting and protecting the rights, dignity, and safety
+              of every child.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <h3>Social Integration</h3>
+            <p>
+              Encouraging positive relationships and helping children
+              and youth participate in their communities.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- REGISTRATION INFORMATION -->
+    <section class="content-section registration-section" id="registration">
+      <div class="container registration-content">
+
+        <span class="eyebrow">Our Future</span>
+
+        <h2>Building a Foundation for the Future</h2>
+
+        <p>
+          Phumelela CYCC intends to register as a Non-Profit
+          Organisation (NPO) under the NPO Act and obtain Public
+          Benefit Organisation (PBO) status.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- CONTACT US -->
+    <section class="content-section contact-section" id="contact">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Get In Touch</span>
+          <h2>Contact Us</h2>
+          <p>
+            For enquiries or more information, please contact us
+            using the details below.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <article class="contact-card">
+            <h3>Emmanuel Maphosa</h3>
+            <p>Contact us for enquiries</p>
+            <a href="tel:+27606887845">+27 60 688 7845</a>
+          </article>
+
+          <article class="contact-card">
+            <h3>Mlungisi Mabobo</h3>
+            <p>Contact us for enquiries</p>
+            <a href="tel:+27765836672">+27 76 583 6672</a>
+          </article>
+
+          <article class="contact-card">
+            <h3>Maria Kekana</h3>
+            <p>Contact us for enquiries</p>
+            <a href="tel:+27829298269">+27 82 929 8269</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BOTTOM BRAND: SMALLER LOGO, NAME AND SLOGAN -->
+  <section class="bottom-brand" aria-label="Phumelela organisation branding">
+    <div class="container">
+
+      <img
+        class="bottom-brand-logo"
+        src="/Phumelela%20Logo%20CYCC.png"
+        alt="Phumelela Child and Youth Care Centre logo"
+      >
+
+      <h2>Phumelela Child &amp; YouthCare Centre</h2>
+
+      <p>Uplifting children, empowering lives.</p>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        &copy; <span id="current-year"></span>
+        <strong>Phumelela Child &amp; YouthCare Centre.</strong>
+        Uplifting children, empowering lives.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
